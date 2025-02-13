@@ -1614,6 +1614,9 @@ footer.site-footer .fixed-container {
 }
 
 @media (max-width: 576px) {
+    .swiper.hero-slider {
+       max-height: 500px;
+      }
     .service-item__heading .list-arrow {
         height: 40px;
         width: 40px;
