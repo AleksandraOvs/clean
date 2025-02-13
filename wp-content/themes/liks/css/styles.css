@@ -293,7 +293,7 @@ header.header-scroll .fixed-container nav {
     width: 60%;
     font-size: 19px;
   }
-  
+
 .hero-slide__top h1 {
     font-size: 5vw;
     font-weight: 700;
@@ -1178,6 +1178,10 @@ footer.site-footer .fixed-container {
         padding-top: unset;
         padding-bottom: 100px;
         gap: 30px;
+    }
+
+    .hero-slide__bottom {
+        width: 100%;
     }
 
     .num-block span:first-child {
