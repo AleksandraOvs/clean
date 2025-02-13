@@ -292,9 +292,9 @@ header.header-scroll .fixed-container nav {
 }
 
 .hero-slide__top h1 {
-    font-size: 4vw;
+    font-size: 6vw;
     font-weight: 700;
-}
+  }
 
 .accent-text {
     display: inline-block;
@@ -1078,6 +1078,10 @@ footer .fixed-container {
 .site-info__text {
     margin-top: 30px;
 }
+
+footer.site-footer .fixed-container {
+    padding-bottom: 50px;
+  }
 
 .arrow-up {
     display: none;
