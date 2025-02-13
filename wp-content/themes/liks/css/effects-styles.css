@@ -1,0 +1,46 @@
+.fromOpacity {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.fromTop {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 2s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.fromRight {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 2s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.fromBottom {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: opacity 2s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.animateScale {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 2s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.fromOpacity.elementShow,
+.fromTop.elementShow,
+.fromBottom.elementShow,
+.fromRight.elementShow,
+.animateScale.elementShow {
+    opacity: 1;
+    transform: none;
+}
+
+.section-title.fromOpacity .heading-line {
+    width: 0;
+    transition: all 2s ease-in-out;
+}
+
+.section-title.fromOpacity.elementShow .heading-line {
+    width: 60%;
+}
