@@ -1446,6 +1446,12 @@ footer.site-footer .fixed-container {
         text-align: center;
     }
 
+    .hero-slide__top .accent-text {
+        margin: 0 auto;
+        display: block;
+        width: max-content;
+      }
+
     .hero-slide__bottom {
         text-align: center;
     }
