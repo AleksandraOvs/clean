@@ -1172,12 +1172,19 @@ footer.site-footer .fixed-container {
 
     .hero-slide__content {
         justify-content: center;
-        padding: 30px;
-        padding-top: 30px;
-        box-sizing: border-box;
-        padding-top: unset;
-        padding-bottom: 100px;
-        gap: 30px;
+    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    padding-top: unset;
+    padding-bottom: 100px;
+    gap: 30px;
+    color: var(--black);
+    }
+
+    .hero-slide__content:hover{
+        color: var(--black);
     }
 
     .hero-slide__bottom {
