@@ -836,6 +836,7 @@ header.header-scroll .fixed-container nav {
     position: relative;
     overflow: hidden;
     border-radius: 25px;
+    height: 450px;
 }
 
 .about-section__right img.about-img {
