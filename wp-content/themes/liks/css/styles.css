@@ -220,6 +220,17 @@ header.header-scroll .fixed-container nav {
     display: flex;
 }
 
+.main-navigation div .menu .menu-item-has-children::after {
+    content: '';
+    width: 7px;
+    height: 7px;
+    background: #000;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+
 /*SLIDER*/
 .hero {
     padding-top: 20px;
@@ -617,6 +628,7 @@ header.header-scroll .fixed-container nav {
     width: 70px;
     background: var(--accent);
     border-radius: 25px;
+    transition: all .5s linear;
 }
 
 .service-item__heading .list-arrow svg {
@@ -625,13 +637,10 @@ header.header-scroll .fixed-container nav {
     object-fit: contain;
     object-position: center;
     transition: transform .5s linear;
-
 }
 
-.service-item__heading__inner {
-    background: #fff;
-    border-radius: 25px;
-    width: calc(100% - 80px);
+.service-item__heading:hover .list-arrow{
+    background: var(--turk);
 }
 
 .service-item__heading__inner {
@@ -640,15 +649,18 @@ header.header-scroll .fixed-container nav {
     align-items: center;
     justify-content: flex-start;
     transition: all .5s linear;
+    background: #fff;
+    border-radius: 25px;
+    width: calc(100% - 80px);
 }
 
-.services-list__item:hover .service-item__heading .list-arrow svg {
+/* .services-list__item:hover .service-item__heading .list-arrow svg {
     transform: translateX(10px);
-}
+} */
 
-.services-list__item:hover .service-item__heading .service-item__heading__inner {
+/* .services-list__item:hover .service-item__heading .service-item__heading__inner {
     background: var(--grey);
-}
+} */
 
 .services-list__item:hover img {
     transform: scale(1.02);
