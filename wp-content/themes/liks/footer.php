@@ -78,6 +78,9 @@
 			<?php
 			}
 			?>
+
+			<?php get_template_part('template-parts/feedback-button')
+			?>
 		</div>
 
 
@@ -90,6 +93,14 @@ if (current_user_can('administrator')) {
 }
 
 ?>
+
+<div style="display: none; width: 500px;" id="form-popup">
+	<?php
+	if ($footer_contactform = carbon_get_theme_option('crb_feedback_button_shortcode')) {
+		echo do_shortcode(" $footer_contactform ");
+	}
+	?>
+</div>
 
 <div class="arrow-up">
 	<svg width="23" height="37" viewBox="0 0 23 37" fill="none" xmlns="http://www.w3.org/2000/svg">

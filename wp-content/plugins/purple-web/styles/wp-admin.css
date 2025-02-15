@@ -96,11 +96,23 @@
 
 .cf-complex__group.cf-complex__group--grid {
   padding: 20px;
-  background: rgba(253,153,0,.2);
+  background: #ededed;
   border-radius: 10px;
+  border: 1px solid #cacaca;
 }
 
 .cf-complex__group--grid .cf-complex__group-head, .cf-complex__group--grid .cf-complex__group-body {
   background: transparent;
   border: none;
 }
+
+.cf-complex--grid.complex-grid .cf-field__body .cf-complex__groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.cf-complex--grid.complex-grid .cf-field__body .cf-complex__groups .cf-complex__groups{
+  padding: 7px;
+}
+

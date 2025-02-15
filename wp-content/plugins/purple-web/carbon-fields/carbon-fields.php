@@ -110,6 +110,11 @@ function site_carbon()
 
         ->add_tab(__('Код Яндекс-карты'), array(
             Field::make('text', 'crb_map_code', 'Код карты')
+        ))
+
+        ->add_tab(__('Форма обратной связи (кнопка)'), array(
+            Field::make('text', 'crb_feedback_button_shortcode', 'Контактная форма для страницы')
+                ->help_text('вставьте шорткод для формы обратной связи в это поле')
         ));
 
         // ->add_tab(__('Фото как нас найти'), array(
@@ -138,59 +143,7 @@ function site_carbon()
         //         ))
         // ));
 
-    Container::make('theme_options', 'Расписание')
-        //->show_on_page('shedule')
-        ->set_page_menu_position(3)
-        ->set_icon('dashicons-media-spreadsheet')
-        ->set_classes('shedule')
-        ->add_fields(array(
-            Field::make('complex', 'crb_shedule_days', 'Расписание')
-                ->set_max(7)
-                ->add_fields(array(
-                    Field::make('text', 'crb_day', 'День недели')
-                        ->set_width(15),
-                    Field::make('complex', 'crb_shedule', 'Тренировка')
-                        ->add_fields(array(
-                            Field::make('time', 'crb_day_time', 'Время')
-                                ->set_attribute('placeholder', 'Введите время')
-                                ->set_width(20),
-                            Field::make('text', 'crb_day_trainer', 'Тренер')
-                                ->set_width(15),
-                            Field::make('association', 'crb_courses', 'Направление')
-                                ->set_width(50)
-                                ->set_max(1)
-                                ->set_types([
-                                    [
-                                        'type'      => 'post',
-                                        'post_type' => 'courses',
-                                    ]
-                                ])
-                        ))
-                ))
-        ));
-
-
-    // Container::make('theme_options', 'Первый экран')
-    //     ->set_page_menu_position(2)
-    //     ->set_icon('dashicons-cover-image')
-    //     ->add_fields(array(
-    //         Field::make('image', 'crb_hero-image', 'Изображение')
-    //             ->set_width(20),
-    //         Field::make('rich_text', 'crb_hero-head', 'Первый заголовок')
-    //             ->set_width(40),
-    //         Field::make('rich_text', 'crb_hero-description', 'Текст под заголовком')
-    //             ->set_width(40),
-    //         Field::make('text', 'crb_hero_button', 'Название кнопки')
-    //             ->set_width(50),
-    //         Field::make('text', 'crb_button_link', 'Ссылка кнопки')
-    //             ->set_width(50),
-    //         Field::make('text', 'crb_hero-slider_head', 'Заголовок слайдера')
-    //             ->set_width(50),
-    //         Field::make('complex', 'hero-slider', 'Слайдер на главном экране')
-    //             ->add_fields(array(
-    //                 Field::make('rich_text', 'hero-slider_content', 'Текст слайда')
-    //             ))
-    //     ));
+  
 
     /*POST META*/
 
@@ -319,8 +272,10 @@ function site_carbon()
             Field::make('rich_text', 'crb_clients_desc', 'Краткое описание')
                 ->set_width(50),
             Field::make('complex', 'crb_clients', 'Слайды наши клиенты')
+                ->set_classes( 'complex-grid' )
                 ->add_fields(array(
                     Field::make('image', 'crb_clients_item', 'Логотип'),
+                    Field::make('text', 'crb_clients_item_link', 'Ссылка логотипа'),
                 ))
         ))
 

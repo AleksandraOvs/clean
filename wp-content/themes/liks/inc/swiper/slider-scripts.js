@@ -15,7 +15,7 @@ const swiper = new Swiper('.hero-slider', {
 const swiperWorks = new Swiper('.works-slider', {
   slidesPerView: 1, // this
   centeredSlides: true,
-  initialSlide:1,
+  initialSlide: 1,
   navigation: {
     nextEl: '.works-slider__button-next',
     prevEl: '.works-slider__button-prev',
@@ -31,7 +31,7 @@ const swiperWorks = new Swiper('.works-slider', {
 });
 
 const swiperClients = new Swiper('.ourClients-slider', {
-  slidesPerView: 4, // this
+  slidesPerView: 1, // this
   loop: true,
   spaceBetween: 20,
   // centeredSlides: true,
@@ -39,20 +39,42 @@ const swiperClients = new Swiper('.ourClients-slider', {
   //watchSlidesProgress: true,
   grabCursor: true,
   navigation: {
-    nextEl: '.trainers-slider__button-next',
-    prevEl: '.trainers-slider__button-prev',
+    nextEl: '.ourClients-slider__button-next',
+    prevEl: '.ourClients-slider__button-prev',
   },
-  speed: 15000,
-  autoplay: {
-    enabled: true,
-    delay: 1,
+
+  breakpoints: {
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      watchSlidesProgress: true,
+      grabCursor: true,
+      speed: 15000,
+      autoplay: {
+        enabled: true,
+        delay: 1,
+      },
+      grid: {
+        rows: 1
+      },
     },
+
+    375: {
+      slidesPerView: 2, // this
+      //centeredSlides: true,
+      autoplay: false,
+      grid: {
+        rows: 2
+      },
+    }
+
+  }
 });
 
 const swiperFeedback = new Swiper('.feedback-slider', {
   slidesPerView: 1, // this
   centeredSlides: true,
-  initialSlide:1,
+  initialSlide: 1,
   navigation: {
     nextEl: '.fdb-slider__button-next',
     prevEl: '.fdb-slider__button-prev',
