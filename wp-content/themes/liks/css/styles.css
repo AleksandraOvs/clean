@@ -220,15 +220,22 @@ header.header-scroll .fixed-container nav {
     display: flex;
 }
 
-.main-navigation div .menu .menu-item-has-children::after {
+  .main-navigation div .menu .menu-item-has-children:after {
     content: '';
-    width: 7px;
+    width: 11px;
     height: 7px;
-    background: #000;
+    background-image: url(../images/svg/arrow-item.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     display: block;
     position: absolute;
     right: 0;
     top: 50%;
+  }
+
+  .main-navigation div .menu .menu-item-has-children{
+    padding-right:15px;
   }
 
 /*SLIDER*/
@@ -312,7 +319,7 @@ header.header-scroll .fixed-container nav {
   }
 
 .hero-slide__top h1 {
-    font-size: 5vw;
+    font-size: 3.5vw;
     font-weight: 700;
     line-height: 1.2;
   }
@@ -322,7 +329,7 @@ header.header-scroll .fixed-container nav {
     background: var(--accent);
     padding: 10px 18px;
     border-radius: 10px;
-    font-size: 5vw;
+    font-size: 3.5vw;
     font-weight: 700;
   }
 
@@ -1390,6 +1397,10 @@ footer.site-footer .fixed-container {
 
     .site-header.header-scroll .site-links {
         display: none;
+    }
+
+    .main-navigation div .menu .menu-item-has-children:after {
+        content: none;
     }
 }
 
