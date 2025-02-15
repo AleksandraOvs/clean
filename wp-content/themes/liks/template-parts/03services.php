@@ -2,6 +2,7 @@
 $services_query = new WP_Query(array(
     'post_type' => 'services',
     'order' => 'ASC',
+    'orderby' => 'date',
     'posts_per_page' => -1
 ));
 
