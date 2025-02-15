@@ -93,11 +93,11 @@ function site_carbon()
 
         ))
 
-        ->add_tab(__('Настройки футера'), array (
+        ->add_tab(__('Настройки футера'), array(
             Field::make('rich_text', 'crb_footer_info', 'Юридическая информация под логотипом'),
             Field::make('complex', 'footer_messengers', 'Ссылки')
-            ->add_fields(array(
-                Field::make('text', 'crb_fmes_name', 'Название')
+                ->add_fields(array(
+                    Field::make('text', 'crb_fmes_name', 'Название')
                         ->set_width(33),
 
                     Field::make('text', 'crb_fmes_link', 'Ссылка на ресурс')
@@ -105,7 +105,7 @@ function site_carbon()
 
                     Field::make('image', 'crb_fmes_image', 'Иконка')
                         ->set_width(33),
-            ))
+                ))
         ))
 
         ->add_tab(__('Код Яндекс-карты'), array(
@@ -116,37 +116,37 @@ function site_carbon()
             Field::make('text', 'crb_feedback_button_shortcode', 'Контактная форма для страницы')
                 ->help_text('вставьте шорткод для формы обратной связи в это поле'),
             Field::make('text', 'crb_form1_shortcode', 'Шорткод для формы калькулятора')
-            ->help_text('вставьте шорткод для формы обратной связи, которая отображается на первом экране главной страницы, и на страницах отдельной услуги (форма расчета)')
+                ->help_text('вставьте шорткод для формы обратной связи, которая отображается на первом экране главной страницы, и на страницах отдельной услуги (форма расчета)')
                 ->set_width(50),
         ));
 
-        // ->add_tab(__('Фото как нас найти'), array(
-        //     Field::make('complex', 'found_images', 'Фото Как нас найти')
-        //         ->add_fields(array(
-        //             Field::make('image', 'crb_found_image', 'Фото')
-        //                 ->set_width(50),
-        //             Field::make('rich_text', 'crb_found_caption', 'Описание к фото')
-        //                 ->set_width(50)
-        //         ))
-        // ))
+    // ->add_tab(__('Фото как нас найти'), array(
+    //     Field::make('complex', 'found_images', 'Фото Как нас найти')
+    //         ->add_fields(array(
+    //             Field::make('image', 'crb_found_image', 'Фото')
+    //                 ->set_width(50),
+    //             Field::make('rich_text', 'crb_found_caption', 'Описание к фото')
+    //                 ->set_width(50)
+    //         ))
+    // ))
 
-        // ->add_tab(__('Форма обратной связи(в футере)'), array(
-        //     Field::make('text', 'crb_footer_form_shortcode', 'Контактная форма для страницы')
-        //         ->help_text('вставьте шорткод для формы обратной связи в это поле')
-        // ))
+    // ->add_tab(__('Форма обратной связи(в футере)'), array(
+    //     Field::make('text', 'crb_footer_form_shortcode', 'Контактная форма для страницы')
+    //         ->help_text('вставьте шорткод для формы обратной связи в это поле')
+    // ))
 
-        // ->add_tab(__('Другие настройки'), array(
-        //     Field::make('image', 'crb_footer_bg', 'Фоновое изображение для футера'),
-        //     Field::make('complex', 'crb_footer_docs', 'Ссылки на оф. документы в футере')
-        //         ->add_fields(array(
-        //             Field::make('text', 'crb_footer_doc_text', 'Текст ссылки')
-        //                 ->set_width(50),
-        //             Field::make('text', 'crb_footer_doc_link', 'Cсылка на страницу')
-        //                 ->set_width(50),
-        //         ))
-        // ));
+    // ->add_tab(__('Другие настройки'), array(
+    //     Field::make('image', 'crb_footer_bg', 'Фоновое изображение для футера'),
+    //     Field::make('complex', 'crb_footer_docs', 'Ссылки на оф. документы в футере')
+    //         ->add_fields(array(
+    //             Field::make('text', 'crb_footer_doc_text', 'Текст ссылки')
+    //                 ->set_width(50),
+    //             Field::make('text', 'crb_footer_doc_link', 'Cсылка на страницу')
+    //                 ->set_width(50),
+    //         ))
+    // ));
 
-  
+
 
     /*POST META*/
 
@@ -163,20 +163,36 @@ function site_carbon()
         ));
     Container::make('post_meta', 'Контент для услуги')
         ->show_on_post_type('services')
-        ->add_fields(array(
-            Field::make('text', 'crb_service_description', 'Краткое описание на странице услуги')
-                ->set_width(100),
+        ->add_tab(__('Слайдер страницы'), array(
 
-                Field::make('complex', 'crb_service_slider_items', 'Слайдер услуги')
+            Field::make('complex', 'crb_service_slider_items', 'Слайдер услуги')
                 ->add_fields(array(
                     Field::make('rich_text', 'crb_service-slide_head', 'Заголовок')
                         ->set_width(33),
                     Field::make('rich_text', 'crb_service-slide_desc', 'Краткое описание')
-                    ->help_text('Для акцентного текста используется класс .accent-text')
+                        ->help_text('Для акцентного текста используется класс .accent-text')
                         ->set_width(33),
                     Field::make('text', 'crb_service-slide_link', 'Ссылка слайда')
                         ->set_width(33),
                     Field::make('image', 'crb_service-slide_img', 'Изображение слайда')
+                        ->set_width(33),
+                )),
+        ))
+
+        ->add_tab(__('Перечень услуг с ценами'), array(
+            Field::make('rich_text', 'crb_service_heading', 'Заголовок блока'),
+            Field::make('text', 'crb_service_phone', 'Номер телефона для связи по услуге')
+                ->help_text('Номер телефона, указанный в этом поле будет применяться для всех услуг перечня на этой странице.')
+                ->set_width(50),
+            Field::make('text', 'crb_service_phone_link', 'Ссылка номера телефона')
+                ->set_width(50),
+            Field::make('complex', 'crb_service_price', 'Перечень услуг')
+                ->add_fields(array(
+                    Field::make('text', 'crb_service_price_head', 'Заголовок')
+                        ->set_width(33),
+                    Field::make('text', 'crb_service_price_value', 'Стоимость')
+                        ->set_width(33),
+                    Field::make('image', 'crb_service_price_img', 'Изображение слайда')
                         ->set_width(33),
                 )),
         ));
@@ -189,7 +205,7 @@ function site_carbon()
                     Field::make('rich_text', 'crb_slide_head', 'Заголовок')
                         ->set_width(33),
                     Field::make('rich_text', 'crb_slide_desc', 'Краткое описание')
-                    ->help_text('Для акцентного текста используется класс .accent-text')
+                        ->help_text('Для акцентного текста используется класс .accent-text')
                         ->set_width(33),
                     Field::make('text', 'crb_slide_link', 'Ссылка слайда')
                         ->set_width(33),
@@ -276,7 +292,7 @@ function site_carbon()
             Field::make('rich_text', 'crb_clients_desc', 'Краткое описание')
                 ->set_width(50),
             Field::make('complex', 'crb_clients', 'Слайды наши клиенты')
-                ->set_classes( 'complex-grid' )
+                ->set_classes('complex-grid')
                 ->add_fields(array(
                     Field::make('image', 'crb_clients_item', 'Логотип'),
                     Field::make('text', 'crb_clients_item_link', 'Ссылка логотипа'),
@@ -305,7 +321,7 @@ function site_carbon()
                 ->set_width(33),
             Field::make('rich_text', 'crb_faq_desc', 'Краткий подзаголовок блока')
                 ->set_width(33),
-            
+
             Field::make('complex', 'crb_faq_items', 'Вопрос-ответ')
                 ->add_fields(array(
                     Field::make('text', 'crb_faq_question', 'Вопрос')
@@ -313,47 +329,47 @@ function site_carbon()
                     Field::make('rich_text', 'crb_faq_answer', 'Ответ')
                         ->set_width(50)
                 ))
-                ));
+        ));
 
 
 
-        // Field::make('image', 'crb_aboutus_background', 'Фон для inner')
-        //     ->set_width(50),
-        // Field::make('text', 'crb_aboutus_link', 'Ссылка')
-        //     ->set_width(50),
-        // Field::make('text', 'crb_aboutus_link_text', 'Текст ссылки')
-        //     ->set_width(50),
-        // Field::make('complex', 'crb_aboutus_slides', 'Слайдер блока')
-        //     ->add_fields(array(
-        //         Field::make('image', 'crb_aboutus_slide_image', 'Фото слайда')
-        //             ->set_width(33),
-        //         Field::make('rich_text', 'crb_aboutus_slide_image_caption', 'Описание к фото')
-        //             ->set_width(33),
-        //         Field::make('text', 'crb_aboutus_slide_image_alt', 'Alt для фото')
-        //             ->set_width(50)
-        //     ))
-        // ))
+    // Field::make('image', 'crb_aboutus_background', 'Фон для inner')
+    //     ->set_width(50),
+    // Field::make('text', 'crb_aboutus_link', 'Ссылка')
+    //     ->set_width(50),
+    // Field::make('text', 'crb_aboutus_link_text', 'Текст ссылки')
+    //     ->set_width(50),
+    // Field::make('complex', 'crb_aboutus_slides', 'Слайдер блока')
+    //     ->add_fields(array(
+    //         Field::make('image', 'crb_aboutus_slide_image', 'Фото слайда')
+    //             ->set_width(33),
+    //         Field::make('rich_text', 'crb_aboutus_slide_image_caption', 'Описание к фото')
+    //             ->set_width(33),
+    //         Field::make('text', 'crb_aboutus_slide_image_alt', 'Alt для фото')
+    //             ->set_width(50)
+    //     ))
+    // ))
 
-        //->add_tab(__('Контент блока Наши услуги'), array(
-            // Field::make('text', 'crb_services_head', 'Заголовок блока')
-            //     ->set_width(33),
-            // Field::make('rich_text', 'crb_services_desc', 'Краткий подзаголовок блока')
-            //     ->set_width(33),
-            // Field::make('rich_text', 'crb_services_description', 'Текст')
-            //     ->set_width(33),
-        //))
+    //->add_tab(__('Контент блока Наши услуги'), array(
+    // Field::make('text', 'crb_services_head', 'Заголовок блока')
+    //     ->set_width(33),
+    // Field::make('rich_text', 'crb_services_desc', 'Краткий подзаголовок блока')
+    //     ->set_width(33),
+    // Field::make('rich_text', 'crb_services_description', 'Текст')
+    //     ->set_width(33),
+    //))
 
-     
 
-        // ->add_tab(__('Форма обратной связи'), array(
-        //     Field::make('text', 'crb_cf_form_heading', 'Заголовок формы'),
-        //     Field::make('text', 'crb_cf_form_description', 'Подзаголовок формы'),
-        //     Field::make('rich_text', 'crb_cf_form_text', 'Текст формы'),
-        //     Field::make('Image', 'crb_cf_form_image', 'Изображение для блока с формой'),
-        //     Field::make('text', 'crb_cf_form_shortcode', 'Шорткод формы для страницы')
-        //         ->help_text('вставьте шорткод для формы обратной связи в это поле')
-        //         ->set_width(33),
-        // ));
+
+    // ->add_tab(__('Форма обратной связи'), array(
+    //     Field::make('text', 'crb_cf_form_heading', 'Заголовок формы'),
+    //     Field::make('text', 'crb_cf_form_description', 'Подзаголовок формы'),
+    //     Field::make('rich_text', 'crb_cf_form_text', 'Текст формы'),
+    //     Field::make('Image', 'crb_cf_form_image', 'Изображение для блока с формой'),
+    //     Field::make('text', 'crb_cf_form_shortcode', 'Шорткод формы для страницы')
+    //         ->help_text('вставьте шорткод для формы обратной связи в это поле')
+    //         ->set_width(33),
+    // ));
 
     //Field::make('time', 'time', 'Time')
 
