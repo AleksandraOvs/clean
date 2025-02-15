@@ -256,6 +256,27 @@ header.header-scroll .fixed-container nav {
     margin-top: 20px;
 }
 
+.fancybox-close-small {
+    background: transparent;
+    border: 0;
+    border-radius: 100%;
+    color: #ccc;
+    cursor: pointer;
+    opacity: .8;
+    padding: 8px;
+    position: absolute;
+    right: -12px;
+    top: -44px;
+    z-index: 401;
+  }
+
+  .fancybox-slide--html .fancybox-close-small {
+    color: currentColor;
+    padding: 10px;
+    right: 7px;
+    top: 7px;
+  }
+
 /*nav*/
 
 .main-navigation {
