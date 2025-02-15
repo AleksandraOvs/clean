@@ -12,6 +12,20 @@ const swiper = new Swiper('.hero-slider', {
   },
 });
 
+const serviceSlider = new Swiper('.service-slider', {
+  slidesPerView: 1, // this
+  //slidesPerColumn: 1, 
+  loop: true,
+  effect: 'fade',
+  //spaceBetween: 20,
+  //centeredSlides: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: '.service-slider__button-next',
+    prevEl: '.service-slider__button-prev',
+  },
+});
+
 const swiperWorks = new Swiper('.works-slider', {
   slidesPerView: 1, // this
   centeredSlides: true,

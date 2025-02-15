@@ -112,9 +112,12 @@ function site_carbon()
             Field::make('text', 'crb_map_code', 'Код карты')
         ))
 
-        ->add_tab(__('Форма обратной связи (кнопка)'), array(
+        ->add_tab(__('Формы обратной связи'), array(
             Field::make('text', 'crb_feedback_button_shortcode', 'Контактная форма для страницы')
-                ->help_text('вставьте шорткод для формы обратной связи в это поле')
+                ->help_text('вставьте шорткод для формы обратной связи в это поле'),
+            Field::make('text', 'crb_form1_shortcode', 'Шорткод для формы калькулятора')
+            ->help_text('вставьте шорткод для формы обратной связи, которая отображается на первом экране главной страницы, и на страницах отдельной услуги (форма расчета)')
+                ->set_width(50),
         ));
 
         // ->add_tab(__('Фото как нас найти'), array(
@@ -161,18 +164,21 @@ function site_carbon()
     Container::make('post_meta', 'Контент для услуги')
         ->show_on_post_type('services')
         ->add_fields(array(
-            Field::make('rich_text', 'crb_service_text', 'Текст для услуги'),
-            Field::make('text', 'crb_service_benefit_list_head', 'Заголовок блока преимуществ')
-                ->set_width(33),
-            Field::make('complex', 'crb_service_benefits_list', 'Преимущества услуги')
+            Field::make('text', 'crb_service_description', 'Краткое описание на странице услуги')
+                ->set_width(100),
+
+                Field::make('complex', 'crb_service_slider_items', 'Слайдер услуги')
                 ->add_fields(array(
-                    Field::make('text', 'crb_service_benefit_head', 'Заголовок')
+                    Field::make('rich_text', 'crb_service-slide_head', 'Заголовок')
                         ->set_width(33),
-                    Field::make('rich_text', 'crb_service_benefit_description', 'Описание')
+                    Field::make('rich_text', 'crb_service-slide_desc', 'Краткое описание')
+                    ->help_text('Для акцентного текста используется класс .accent-text')
                         ->set_width(33),
-                    Field::make('image', 'crb_service_benefit_img', 'Иконка')
+                    Field::make('text', 'crb_service-slide_link', 'Ссылка слайда')
                         ->set_width(33),
-                ))
+                    Field::make('image', 'crb_service-slide_img', 'Изображение слайда')
+                        ->set_width(33),
+                )),
         ));
 
     Container::make('post_meta', 'Контент страницы')
@@ -189,9 +195,7 @@ function site_carbon()
                         ->set_width(33),
                     Field::make('image', 'crb_slide_img', 'Изображение слайда')
                         ->set_width(33),
-                )),
-            Field::make('text', 'crb_form1_shortcode', 'Шорткод для формы калькулятора')
-                ->set_width(50),
+                ))
         ))
 
         ->add_tab(__('ликс в цифрах'), array(

@@ -127,16 +127,15 @@
 						<?php
 						}
 						?>
-
-
 						<div class="site-contacts">
 							<?php
 							get_template_part('template-parts/messengers');
 							?>
+
+							<?php get_template_part('template-parts/feedback-button')
+							?>
 						</div>
 					</div>
-
-
 				</nav>
 				<!-- #site-navigation -->
 			</div>
