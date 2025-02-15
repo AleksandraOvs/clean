@@ -304,8 +304,10 @@ header.header-scroll .fixed-container nav {
     justify-content: flex-end;
     height: 100%;
     padding: 30px;
+      padding-right: 30px;
     box-sizing: border-box;
-    color: var(--black)
+    color: var(--black);
+    padding-right: 15%;
 }
 
 .hero-slide__content:hover{
