@@ -23,7 +23,7 @@ get_header();
 			</header><!-- .page-header -->
 
 			<div class="page-content">
-				<a style="font-weight: 600;" href="<?php echo site_url() ?>" class="btn">На главную страницу</a>
+				<a style="margin-top:10vh;" href="<?php echo site_url() ?>" class="btn">На главную страницу</a>
 
 
 			</div><!-- .page-content -->
