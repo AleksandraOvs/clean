@@ -18,9 +18,9 @@ get_header();
 	<main id="primary" class="site-main">
 
 	<div class="fixed-container">
-		<?php if (is_active_sidebar('footer-widget1')) { ?>
-			<?php dynamic_sidebar('footer-widget1'); ?>
-		<?php } ?>
+		<?php //if (is_active_sidebar('footer-widget1')) { ?>
+			<?php //dynamic_sidebar('footer-widget1'); ?>
+		<?php //} ?>
 
 		<div class="page-content">
 			<?php
@@ -49,5 +49,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();
