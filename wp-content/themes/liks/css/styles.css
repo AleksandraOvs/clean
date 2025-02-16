@@ -833,6 +833,10 @@ header.header-scroll .fixed-container nav {
     transition: all .5s linear;
 }
 
+.swiper-slide.feedback-slider__slide{
+    height:570px;
+}
+
 .swiper-slide.works-slider__slide img {
     transition: all .5s linear;
 }
