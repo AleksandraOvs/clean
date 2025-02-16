@@ -12,10 +12,6 @@ get_header();
 
 	<main id="primary" class="site-main">
 	<div class="fixed-container">
-		<?php if (is_active_sidebar('page-sidebar')) { ?>
-			<?php dynamic_sidebar('page-sidebar'); ?>
-		<?php } ?>
-
 		<div class="page-content">
 			<?php
 			while (have_posts()) :
@@ -43,5 +39,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
