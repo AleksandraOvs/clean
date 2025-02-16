@@ -883,6 +883,10 @@ header.header-scroll .fixed-container nav {
     align-items: flex-end;
 }
 
+.swiper-slide.feedback-slider__slide img{
+    object-fit: contain;
+}
+
 .slider-controls {
     display: flex;
     gap: 35px;
