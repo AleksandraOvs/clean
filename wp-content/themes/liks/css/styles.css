@@ -2041,8 +2041,8 @@ footer.site-footer .fixed-container {
 
     .service-item__heading {
         align-items: center;
-        padding: 20px;
-        border: 2px solid var(--turk);
+        padding: 10px;
+        /* border: 2px solid var(--turk); */
         border-radius: 25px;
         transition: all .5s linear;
     }
