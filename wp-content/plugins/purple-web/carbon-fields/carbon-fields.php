@@ -190,7 +190,7 @@ function site_carbon()
                 ->add_fields(array(
                     Field::make('text', 'crb_service_price_head', 'Заголовок')
                         ->set_width(33),
-                    Field::make('text', 'crb_service_price_value', 'Стоимость')
+                    Field::make('rich_text', 'crb_service_price_value', 'Стоимость')
                         ->set_width(33),
                     Field::make('image', 'crb_service_price_img', 'Изображение слайда')
                         ->set_width(33),
