@@ -1,7 +1,7 @@
 <?php
 if ($slides = carbon_get_post_meta(get_the_ID(), 'crb_works')) {
 ?>
-    <section class="works-section">
+    <section class="works-section" id="works">
         <div class="fixed-container">
             <?php
             if ($block_head = carbon_get_post_meta(get_the_ID(), 'crb_head')) {

@@ -1,4 +1,4 @@
- <section class="blog-section">
+ <section class="blog-section" id="blog">
     <div class="fixed-container">
          <!-- BLOG -->
         <h2 class="title">Полезная информация</h2>

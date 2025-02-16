@@ -1,6 +1,6 @@
 <?php if ($faq_items = carbon_get_post_meta(get_the_ID(), 'crb_faq_items')) {
 ?>
-    <section class="faq-section">
+    <section class="faq-section" id="faq-section">
         <div class="fixed-container">
             <?php
             if ($block_head = carbon_get_post_meta(get_the_ID(), 'crb_faq_head')) {

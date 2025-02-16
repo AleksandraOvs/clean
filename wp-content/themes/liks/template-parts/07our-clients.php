@@ -2,7 +2,7 @@
 
 if ($clients_slides = carbon_get_post_meta(get_the_ID(), 'crb_clients')) {
 ?>
-    <section class="ourClients-section">
+    <section class="ourClients-section" id="clients">
         <div class="fixed-container">
             <?php
             if ($сlients_head = carbon_get_post_meta(get_the_ID(), 'crb_clients_head')) {

@@ -1,7 +1,7 @@
 <?php
 if ($slides = carbon_get_post_meta(get_the_ID(), 'crb_fdb')) {
 ?>
-    <section class="feedback-section">
+    <section class="feedback-section" id="feedback">
         <div class="fixed-container">
             <?php
             if ($block_head = carbon_get_post_meta(get_the_ID(), 'crb_fdb_head')) {

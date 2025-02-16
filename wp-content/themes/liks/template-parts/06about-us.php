@@ -1,4 +1,4 @@
-<section class="about-section">
+<section class="about-section" id="about">
     <div class="fixed-container">
         <?php
         if ($about_head = carbon_get_post_meta(get_the_ID(), 'crb_about_head')) {
