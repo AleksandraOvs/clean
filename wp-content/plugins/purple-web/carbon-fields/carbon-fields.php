@@ -257,6 +257,7 @@ function site_carbon()
             Field::make('rich_text', 'crb_desc', 'Краткое описание')
                 ->set_width(50),
             Field::make('complex', 'crb_works', 'Слайды наши работы')
+            ->set_classes('complex-grid')
                 ->add_fields(array(
                     Field::make('image', 'crb_work_item', 'Изображение для слайда'),
                 ))
@@ -305,6 +306,7 @@ function site_carbon()
             Field::make('rich_text', 'crb_fdb_desc', 'Краткое описание')
                 ->set_width(50),
             Field::make('complex', 'crb_fdb', 'Слайды наши клиенты')
+            ->set_classes('complex-grid')
                 ->add_fields(array(
                     Field::make('image', 'crb_fdb_item', 'Изображение'),
                 ))
