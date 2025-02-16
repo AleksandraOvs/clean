@@ -1419,6 +1419,10 @@ header.header-scroll .fixed-container nav {
     margin: 0 auto;
   }
 
+  .page-content article h2 {
+    font-size: 26px;
+  }
+
 /*FOOTER*/
 footer .fixed-container {
     background: var(--grey);
