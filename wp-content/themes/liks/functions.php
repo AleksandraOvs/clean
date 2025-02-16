@@ -124,12 +124,12 @@ function liks_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'liks' ),
-			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'liks' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'id'            => 'page-sidebar',
+			'description'   => esc_html__( 'Виджет для отображения сайдбара внутренней страницы', 'liks' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			//'before_title'  => '<h2 class="widget-title">',
+			//'after_title'   => '</h2>',
 		)
 	);
 

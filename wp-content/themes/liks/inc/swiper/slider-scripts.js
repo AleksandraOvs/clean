@@ -59,7 +59,7 @@ const swiperClients = new Swiper('.ourClients-slider', {
 
   breakpoints: {
     768: {
-      slidesPerView: 4,
+      slidesPerView: 6,
       spaceBetween: 20,
       watchSlidesProgress: true,
       grabCursor: true,
