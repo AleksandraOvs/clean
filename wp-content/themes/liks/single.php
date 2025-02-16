@@ -13,7 +13,7 @@ get_header();
 
 <main id="primary" class="site-main">
 	<div class="fixed-container">
-		<div class="page-content">
+		<div class="page-content _single-template">
 
 			<?php
 			while (have_posts()) :

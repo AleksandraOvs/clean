@@ -1136,7 +1136,8 @@ a.menu-toggle._open .bar:nth-child(3) {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+		margin: 0;
+		padding: 70px 0;
 }
 
 .page-links {
