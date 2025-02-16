@@ -1547,6 +1547,14 @@ footer.site-footer .fixed-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .header-links__inner .site-contacts {
+        width: 100%;
+      }
+
+      .site-contacts a.btn {
+        width: max-content;
+      }
 }
 
 @media(max-width: 1024px) {
