@@ -98,6 +98,7 @@
  <?php
     if ($service_price_items = carbon_get_post_meta(get_the_ID(), 'crb_service_price')) {
     ?>
+    <section class="services-list">
      <div class="fixed-container">
         <?php 
             if ($heading = carbon_get_post_meta(get_the_ID(), 'crb_service_heading')){
@@ -155,6 +156,7 @@
                 ?>
          </ul>
      </div>
+     </section>
  <?php
     }
     ?>
