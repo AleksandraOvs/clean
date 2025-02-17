@@ -1304,11 +1304,11 @@ header.header-scroll .fixed-container nav {
     transform: scale(1.05);
 }
 
-.widget_block .wp-block-group .wp-block-latest-posts__list li {
+/* .widget_block .wp-block-group .wp-block-latest-posts__list li {
     display: flex;
     gap: 10px;
     align-items:flex-start;
-  }
+  } */
 
   .wp-block-latest-posts__featured-image {
     position: relative;
