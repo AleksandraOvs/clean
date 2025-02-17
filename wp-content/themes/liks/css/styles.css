@@ -2023,6 +2023,11 @@ footer.site-footer .fixed-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .page-content._single-template {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
 }
 
 
