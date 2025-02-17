@@ -16,9 +16,22 @@
 	if (is_front_page()) :
 	?>
 		<a class="blog-item" href="<?php echo the_permalink() ?>">
-			<?php
-			liks_post_thumbnail();
-			?>
+		<?php
+                        if (has_post_thumbnail()) {
+                            the_post_thumbnail(
+                                'post-thumbnail',
+                                array(
+                                    'alt' => the_title_attribute(
+                                        array(
+                                            'echo' => false,
+                                        )
+                                    ),
+                                )
+                            );
+                        } else {
+                            echo '<img src="' . get_stylesheet_directory_uri() . '/images/svg/placeholder.svg" />';
+                        }
+                        ?>
 
 			<div class="blog-item__title">
 				<?php

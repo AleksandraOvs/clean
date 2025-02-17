@@ -1292,6 +1292,14 @@ header.header-scroll .fixed-container nav {
     gap: 10px;
 }
 
+.blog-item img {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 25px;
+  }
+
 .blog-section article .blog-item:hover .post-thumbnail img {
     transform: scale(1.05);
 }
