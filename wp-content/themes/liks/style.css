@@ -500,7 +500,9 @@ ul {
 
 ol {
 	list-style: decimal;
-}
+	  list-style-position: outside;
+	list-style-position: inside;
+  }
 
 li>ul,
 li>ol {
