@@ -15,6 +15,10 @@ get_header();
 	<section class="blog-section">
 		<div class="fixed-container">
 			<div class="page-content">
+			<?php
+					the_archive_title('<h2 class="page-title">', '</h2>');
+					the_archive_description('<div class="archive-description">', '</div>');
+					?>
 				<div class="blog-section">
 					<?php
 					while (have_posts()) :
