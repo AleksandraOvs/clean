@@ -150,17 +150,18 @@ function site_carbon()
 
     /*POST META*/
 
-    Container::make('post_meta', 'Контент страницы')
-        ->show_on_template('page-trainers.php')
-        ->add_fields(array(
-            Field::make('complex', 'crb_trainers_content_blocks', 'Контент для внутренней страницы тренеров')
-                ->add_fields(array(
-                    Field::make('rich_text', 'crb_trainers_content_text', 'Текстовый абзац')
-                        ->set_width(50),
-                    Field::make('image', 'crb_trainers_content_img', 'Фото для текстового блока')
-                        ->set_width(50),
-                ))
-        ));
+    // Container::make('post_meta', 'Контент страницы')
+    //     ->show_on_template('page-trainers.php')
+    //     ->add_fields(array(
+    //         Field::make('complex', 'crb_trainers_content_blocks', 'Контент для внутренней страницы тренеров')
+    //             ->add_fields(array(
+    //                 Field::make('rich_text', 'crb_trainers_content_text', 'Текстовый абзац')
+    //                     ->set_width(50),
+    //                 Field::make('image', 'crb_trainers_content_img', 'Фото для текстового блока')
+    //                     ->set_width(50),
+    //             ))
+    //     ));
+
     Container::make('post_meta', 'Контент для услуги')
         ->show_on_post_type('services')
         ->add_tab(__('Слайдер страницы'), array(
@@ -198,7 +199,9 @@ function site_carbon()
         ));
 
     Container::make('post_meta', 'Контент страницы')
+   // ->where('page_template', '=', 'single-services.php')
         ->show_on_page('main')
+        ->show_on_post_type('services')
         ->add_tab(__('Первый экран'), array(
             Field::make('complex', 'crb_slider_items', 'Слайдер')
                 ->add_fields(array(

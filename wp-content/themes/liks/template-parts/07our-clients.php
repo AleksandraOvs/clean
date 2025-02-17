@@ -15,6 +15,8 @@ if ($clients_slides = carbon_get_post_meta(get_the_ID(), 'crb_clients')) {
             }
             ?>
 
+            <?php  //print_r($clients_slides) ?>
+
             <div class="swiper ourClients-slider">
                 <div class="swiper-wrapper">
                     <?php
@@ -38,6 +40,7 @@ if ($clients_slides = carbon_get_post_meta(get_the_ID(), 'crb_clients')) {
                     ?>
                         
                     <?php
+                        
                     }
                     ?>
                 </div>

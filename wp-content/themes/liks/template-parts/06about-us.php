@@ -5,6 +5,9 @@
             echo '<h2 class="title">' . $about_head . '</h2>';
         }
         ?>
+
+        <?php //print_r(get_the_ID()); ?>
+
         <div class="about-section__inner">
             <div class="about-section__left">
                 <div class="about-section__head">
