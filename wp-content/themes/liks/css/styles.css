@@ -1304,6 +1304,27 @@ header.header-scroll .fixed-container nav {
     transform: scale(1.05);
 }
 
+.widget_block .wp-block-group .wp-block-latest-posts__list li {
+    display: flex;
+    gap: 10px;
+    align-items:flex-start;
+  }
+
+  .wp-block-latest-posts__featured-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .wp-block-latest-posts__featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
 #faq {
     /* display:grid;
     grid-template-columns: repeat(2, 1fr); 
